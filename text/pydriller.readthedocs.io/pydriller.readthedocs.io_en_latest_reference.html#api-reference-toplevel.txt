@@ -1,0 +1,211 @@
+
+
+
+
+
+API Reference — PyDriller 1.0 documentation
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            PyDriller
+          
+
+                latest
+              
+
+
+
+
+
+
+
+
+
+Overview / Install
+Getting Started
+Repository
+Commit
+ModifiedFile
+Git
+Delta Maintainability
+Process Metrics
+API Reference
+Version
+pydriller.__version__
+
+
+Git
+Repository
+Commit
+Developer
+Developer
+Developer.__init__()
+Developer.__module__
+
+
+
+
+Process Metrics
+
+
+
+
+
+
+
+
+PyDriller
+
+
+
+
+
+
+API Reference
+
+ Edit on GitHub
+
+
+
+
+
+
+
+API Reference
+
+Version
+
+
+pydriller.__version__
+Current Pydriller version.
+
+
+
+Git
+
+
+Repository
+
+
+Commit
+
+
+Developer
+This module includes only 1 class, Developer, representing a developer.
+
+
+class pydriller.domain.developer.Developer(name: str | None = None, email: str | None = None)
+This class represents a developer. We save the email and the name.
+
+
+__init__(name: str | None = None, email: str | None = None)
+Class to identify a developer.
+
+Parameters:
+
+name (str) – name and surname of the developer
+email (str) – email of the developer
+
+
+
+
+
+
+__module__ = 'pydriller.domain.developer'
+
+
+
+
+Process Metrics
+
+
+
+
+
+ Previous
+
+
+
+© Copyright 2018, Davide Spadini.
+      Revision fecaac26.
+      
+
+
+  Built with Sphinx using a
+    theme
+    provided by Read the Docs.
+   
+
+
+
+
+
+
+
+
+ Read the Docs
+      v: latest
+      
+
+
+
+Versions
+latest
+2.5.1
+2.0
+1.15
+1.13
+1.12
+1.11
+1.10
+1.9
+1.8
+1.7
+1.6
+1.5
+1.4
+1.3
+1.2
+1.1
+1.0
+
+
+Downloads
+
+
+On Read the Docs
+
+Project Home
+
+
+Builds
+
+
+
+
+
+

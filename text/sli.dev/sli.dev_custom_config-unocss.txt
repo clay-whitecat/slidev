@@ -1,0 +1,48 @@
+
+
+
+
+
+Configure UnoCSS | Slidev
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Skip to content SlidevSearchKMain NavigationGuideWhy SlidevGetting StartedInstallationMarkdown SyntaxNavigationAnimationsExportingStatic HostingRecord PresentationPresenter ModeDrawing & AnnotationsEditor IntegrationsFAQThemeUse ThemeTheme GalleryWrite a ThemeBuilt-inComponentsLayoutsCustomizeCustomizationsDirectory StructureFontsHighlightersConfigure VueConfigure ViteConfigure UnoCSSConfigure MonacoConfigure KaTeXConfigure MermaidConfigure ParserConfigure ShortcutsVue Global ContextGlobal LayersAddonUse AddonWrite an AddonResourcesShowcasesLearning ResourcesCurated Coversv0.48.0-beta.2Release NotesEnglish简体中文FrançaisEspañolРусскийViệt NamDeutschPortuguês (BR)Ελληνικά日本語GitHubTwitterDiscordEnglish简体中文FrançaisEspañolРусскийViệt NamDeutschPortuguês (BR)Ελληνικά日本語AppearanceGitHubTwitterDiscordMenuReturn to top Sidebar Navigation GuideWhy SlidevGetting StartedInstallationMarkdown SyntaxNavigationAnimationsExportingStatic HostingRecord PresentationPresenter ModeDrawing & AnnotationsEditor IntegrationsFAQThemesUse ThemeTheme GalleryWrite a ThemeAddonsUse AddonWrite an AddonCustomizationsCustomizationsDirectory StructureFontsHighlightersConfigure VueConfigure ViteConfigure UnoCSSConfigure MonacoConfigure KaTeXConfigure MermaidConfigure ParserConfigure ShortcutsVue Global ContextGlobal LayersBuilt-inComponentsLayoutsOn this page Table of Contents for current page Configure UnoCSS ​ Environment: node This setup function will only run on Node.js environment, you can have access to Node's API. UnoCSS is now the default CSS framework for Slidev since v0.42.0. UnoCSS is an fast atomic CSS engine that has full flexibility and extensibility.By default, Slidev enables the following presets out-of-box:@unocss/preset-uno - Tailwind / Windi CSS compatible utilities@unocss/preset-attributify - Attributify mode@unocss/preset-icons - Use any icons as class@unocss/preset-web-fonts - Use web fonts at ease@unocss/transformer-directives - Use @apply in CSSSlidev also adds shortcuts as can be seen in its source code.You can therefore style your content the way you want. For example:html<div class="grid pt-4 gap-4 grid-cols-[100px,1fr]">
+
+### Name
+
+- Item 1
+- Item 2
+
+</div>Configurations ​You can create uno.config.ts under the root of your project to extend the builtin configurationstsimport { defineConfig } from 'unocss'
+
+export default defineConfig({
+  shortcuts: {
+    // custom the default background
+    'bg-main': 'bg-white text-[#181818] dark:(bg-[#121212] text-[#ddd])',
+  },
+  // ...
+})Learn more about UnoCSS configurations Suggest changes to this pagePrevious pageConfigure ViteNext pageConfigure MonacoReleased under the MIT License.Copyright © 2020 Anthony Fu.
+
+

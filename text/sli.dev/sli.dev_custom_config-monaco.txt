@@ -1,0 +1,95 @@
+
+
+
+
+
+Configure Monaco | Slidev
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Skip to content SlidevSearchKMain NavigationGuideWhy SlidevGetting StartedInstallationMarkdown SyntaxNavigationAnimationsExportingStatic HostingRecord PresentationPresenter ModeDrawing & AnnotationsEditor IntegrationsFAQThemeUse ThemeTheme GalleryWrite a ThemeBuilt-inComponentsLayoutsCustomizeCustomizationsDirectory StructureFontsHighlightersConfigure VueConfigure ViteConfigure UnoCSSConfigure MonacoConfigure KaTeXConfigure MermaidConfigure ParserConfigure ShortcutsVue Global ContextGlobal LayersAddonUse AddonWrite an AddonResourcesShowcasesLearning ResourcesCurated Coversv0.48.0-beta.2Release NotesEnglish简体中文FrançaisEspañolРусскийViệt NamDeutschPortuguês (BR)Ελληνικά日本語GitHubTwitterDiscordEnglish简体中文FrançaisEspañolРусскийViệt NamDeutschPortuguês (BR)Ελληνικά日本語AppearanceGitHubTwitterDiscordMenuReturn to top Sidebar Navigation GuideWhy SlidevGetting StartedInstallationMarkdown SyntaxNavigationAnimationsExportingStatic HostingRecord PresentationPresenter ModeDrawing & AnnotationsEditor IntegrationsFAQThemesUse ThemeTheme GalleryWrite a ThemeAddonsUse AddonWrite an AddonCustomizationsCustomizationsDirectory StructureFontsHighlightersConfigure VueConfigure ViteConfigure UnoCSSConfigure MonacoConfigure KaTeXConfigure MermaidConfigure ParserConfigure ShortcutsVue Global ContextGlobal LayersBuilt-inComponentsLayoutsOn this page Table of Contents for current page Configure Monaco ​ Environment: client This setup function will only run on client side. Make sure the browser compatibility when importing packages. Create ./setup/monaco.ts with the following content:tsimport { defineMonacoSetup } from '@slidev/types'
+
+export default defineMonacoSetup(async (monaco) => {
+  // use `monaco` to configure
+})Learn more about configuring Monaco.Usage ​To use Monaco in your slides, simply append {monaco} to your code snippets:md```js
+const count = ref(1)
+const plusOne = computed(() => count.value + 1)
+
+console.log(plusOne.value) // 2
+
+plusOne.value++ // error
+```Tomd```js {monaco}
+const count = ref(1)
+const plusOne = computed(() => count.value + 1)
+
+console.log(plusOne.value) // 2
+
+plusOne.value++ // error
+```Exporting ​By default, Monaco will ONLY work on dev mode. If you would like to have it available in the exported SPA, configure it in your frontmatter:yaml---
+monaco: true # default "dev"
+---Types Auto Installing ​When use TypeScript with Monaco, types for dependencies will be installed to the client-side automatically.md```ts {monaco}
+import { ref } from 'vue'
+import { useMouse } from '@vueuse/core'
+
+const counter = ref(0)
+```In the example above, make sure vue and @vueuse/core are installed locally as dependencies / devDependencies, Slidev will handle the rest to get the types working for the editor automatically!Configure Themes ​The theme is controlled by Slidev based on the light/dark theme. If you want to customize it, you can pass the theme id to the setup function:ts// ./setup/monaco.ts
+import { defineMonacoSetup } from '@slidev/types'
+
+export default defineMonacoSetup(() => {
+  return {
+    theme: {
+      dark: 'vs-dark',
+      light: 'vs',
+    },
+  }
+})If you want to load custom themes:tsimport { defineMonacoSetup } from '@slidev/types'
+
+// change to your themes
+import dark from 'theme-vitesse/themes/vitesse-dark.json'
+import light from 'theme-vitesse/themes/vitesse-light.json'
+
+export default defineMonacoSetup((monaco) => {
+  monaco.editor.defineTheme('vitesse-light', light as any)
+  monaco.editor.defineTheme('vitesse-dark', dark as any)
+
+  return {
+    theme: {
+      light: 'vitesse-light',
+      dark: 'vitesse-dark',
+    },
+  }
+})If you are creating a theme for Slidev, use dynamic import() inside the setup function to get better tree-shaking and code-splitting results.Configure the Editor ​Available since v0.43.0If you would like to customize the Monaco editor you may pass an editorOptions object that matches the Monaco IEditorOptions definition.md```ts {monaco} { editorOptions: { wordWrap:'on'} }
+console.log('HelloWorld')
+```Alternatively if you would like these options to be applied to every Monaco instance, you can return them in the defineMonacoSetup functionts// ./setup/monaco.ts
+import { defineMonacoSetup } from '@slidev/types'
+
+export default defineMonacoSetup(() => {
+  return {
+    editorOptions: {
+      wordWrap: 'on'
+    }
+  }
+}) Suggest changes to this pagePrevious pageConfigure UnoCSSNext pageConfigure KaTeXReleased under the MIT License.Copyright © 2020 Anthony Fu.
+
+

@@ -1,0 +1,35 @@
+
+
+
+
+
+Recording | Slidev
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Skip to content SlidevSearchKMain NavigationGuideWhy SlidevGetting StartedInstallationMarkdown SyntaxNavigationAnimationsExportingStatic HostingRecord PresentationPresenter ModeDrawing & AnnotationsEditor IntegrationsFAQThemeUse ThemeTheme GalleryWrite a ThemeBuilt-inComponentsLayoutsCustomizeCustomizationsDirectory StructureFontsHighlightersConfigure VueConfigure ViteConfigure UnoCSSConfigure MonacoConfigure KaTeXConfigure MermaidConfigure ParserConfigure ShortcutsVue Global ContextGlobal LayersAddonUse AddonWrite an AddonResourcesShowcasesLearning ResourcesCurated Coversv0.48.0-beta.2Release NotesEnglish简体中文FrançaisEspañolРусскийViệt NamDeutschPortuguês (BR)Ελληνικά日本語GitHubTwitterDiscordEnglish简体中文FrançaisEspañolРусскийViệt NamDeutschPortuguês (BR)Ελληνικά日本語AppearanceGitHubTwitterDiscordMenuReturn to top Sidebar Navigation GuideWhy SlidevGetting StartedInstallationMarkdown SyntaxNavigationAnimationsExportingStatic HostingRecord PresentationPresenter ModeDrawing & AnnotationsEditor IntegrationsFAQThemesUse ThemeTheme GalleryWrite a ThemeAddonsUse AddonWrite an AddonCustomizationsCustomizationsDirectory StructureFontsHighlightersConfigure VueConfigure ViteConfigure UnoCSSConfigure MonacoConfigure KaTeXConfigure MermaidConfigure ParserConfigure ShortcutsVue Global ContextGlobal LayersBuilt-inComponentsLayoutsOn this page Table of Contents for current page Recording ​Slidev has a built-in recording and camera view. You can use them to record your presentation easily in one place.Camera View ​Click the  button in the navigation panel to show your camera view in the presentation. You can drag to move it, and use the handler on the right bottom corner to resize it. The size and position will persist in localStorage and will therefore be consistent across multiple refreshes, so no need to worry about that.Recording ​Clicking the  button in the navigation panel will bring up a dialog for you. Here you can choose to either record your camera embedded in your slides or to separate them into two video files.This feature is powered by RecordRTC and uses the WebRTC API. Suggest changes to this pagePrevious pageStatic HostingNext pagePresenter ModeReleased under the MIT License.Copyright © 2020 Anthony Fu.
+
+

@@ -1,0 +1,45 @@
+
+
+
+
+
+Write an Addon | Slidev
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Skip to content SlidevSearchKMain NavigationGuideWhy SlidevGetting StartedInstallationMarkdown SyntaxNavigationAnimationsExportingStatic HostingRecord PresentationPresenter ModeDrawing & AnnotationsEditor IntegrationsFAQThemeUse ThemeTheme GalleryWrite a ThemeBuilt-inComponentsLayoutsCustomizeCustomizationsDirectory StructureFontsHighlightersConfigure VueConfigure ViteConfigure UnoCSSConfigure MonacoConfigure KaTeXConfigure MermaidConfigure ParserConfigure ShortcutsVue Global ContextGlobal LayersAddonUse AddonWrite an AddonResourcesShowcasesLearning ResourcesCurated Coversv0.48.0-beta.2Release NotesEnglish简体中文FrançaisEspañolРусскийViệt NamDeutschPortuguês (BR)Ελληνικά日本語GitHubTwitterDiscordEnglish简体中文FrançaisEspañolРусскийViệt NamDeutschPortuguês (BR)Ελληνικά日本語AppearanceGitHubTwitterDiscordMenuReturn to top Sidebar Navigation GuideWhy SlidevGetting StartedInstallationMarkdown SyntaxNavigationAnimationsExportingStatic HostingRecord PresentationPresenter ModeDrawing & AnnotationsEditor IntegrationsFAQThemesUse ThemeTheme GalleryWrite a ThemeAddonsUse AddonWrite an AddonCustomizationsCustomizationsDirectory StructureFontsHighlightersConfigure VueConfigure ViteConfigure UnoCSSConfigure MonacoConfigure KaTeXConfigure MermaidConfigure ParserConfigure ShortcutsVue Global ContextGlobal LayersBuilt-inComponentsLayoutsOn this page Table of Contents for current page Write an Addon ​Available since v0.32.1Capability ​An addon can contribute to the following points:Global styles (use with caution has it is more the role of themes)Provide custom layouts or override the existing oneProvide custom components or override the existing oneExtend UnoCSS/Windi CSS configurationsConfigure tools like Monaco and PrismConventions ​Addons are published to npm registry, and they should follow the conventions below:Package name should start with slidev-addon-, for example: slidev-addon-awesomeAdd slidev-addon and slidev in the keywords field of your package.jsonSetup ​Initialization ​To create your addon, start by creating a directory with create a package.json file (you can use npm init).Then, install slidev dependencies:bash$ npm install -D @slidev/cliTesting ​To set up the testing playground for your addon, you can create an example.md file with some content.And optionally, you can also add some scripts to your packages.jsonjson// package.json
+{
+  "scripts": {
+    "dev": "slidev example.md",
+    "build": "slidev build example.md",
+    "export": "slidev export example.md",
+    "screenshot": "slidev export example.md --format png"
+  }
+}To publish your addon, simply run npm publish and you are good to go. There is no build process required (which means you can directly publish .vue and .ts files, Slidev is smart enough to understand them).Addon contribution points follow the same conventions as local customization, please refer to the docs for the naming conventions.Addon metadata ​Slidev Version ​If the addon is relying on a specific feature of Slidev that are newly introduced, you can set the minimal Slidev version required to have your addon working properly:json// package.json
+{
+  "engines": {
+    "slidev": ">=0.32.1"
+  }
+}If users are using older versions of Slidev, an error will be thrown. Suggest changes to this pagePrevious pageUse AddonNext pageCustomizationsReleased under the MIT License.Copyright © 2020 Anthony Fu.
+
+

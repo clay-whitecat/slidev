@@ -1,0 +1,208 @@
+
+
+
+
+
+PyDriller documentation! — PyDriller 1.0 documentation
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            PyDriller
+          
+
+                latest
+              
+
+
+
+
+
+
+
+
+
+Overview / Install
+Getting Started
+Repository
+Commit
+ModifiedFile
+Git
+Delta Maintainability
+Process Metrics
+API Reference
+
+
+
+
+
+
+PyDriller
+
+
+
+
+
+
+PyDriller documentation!
+
+ Edit on GitHub
+
+
+
+
+
+
+
+PyDriller documentation!
+
+
+Overview / Install
+Requirements
+Installing PyDriller
+Source Code
+How to cite PyDriller
+
+
+Getting Started
+Repository
+Simple Scenario
+Selecting projects to analyze
+Selecting the Commit Range
+Filtering commits
+Configurations
+Git Diff Algorithms
+
+
+Commit
+ModifiedFile
+Git
+Delta Maintainability
+Background
+Definition
+Properties
+Example usage
+Under the hood
+Relation to SIG DMM
+References
+
+
+Process Metrics
+Change Set
+Code Churn
+Commits Count
+Contributors Count
+Contributors Experience
+Hunks Count
+Lines Count
+
+
+API Reference
+Version
+Git
+Repository
+Commit
+Developer
+Process Metrics
+
+
+
+
+
+
+Indices and tables
+
+Index
+Module Index
+Search Page
+
+
+
+
+
+Next 
+
+
+
+© Copyright 2018, Davide Spadini.
+      Revision fecaac26.
+      
+
+
+  Built with Sphinx using a
+    theme
+    provided by Read the Docs.
+   
+
+
+
+
+
+
+
+
+ Read the Docs
+      v: latest
+      
+
+
+
+Versions
+latest
+2.5.1
+2.0
+1.15
+1.13
+1.12
+1.11
+1.10
+1.9
+1.8
+1.7
+1.6
+1.5
+1.4
+1.3
+1.2
+1.1
+1.0
+
+
+Downloads
+
+
+On Read the Docs
+
+Project Home
+
+
+Builds
+
+
+
+
+
+

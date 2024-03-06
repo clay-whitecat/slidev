@@ -1,0 +1,32 @@
+
+
+
+
+
+Themes Gallery | Slidev
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Skip to content SlidevSearchKMain NavigationGuideWhy SlidevGetting StartedInstallationMarkdown SyntaxNavigationAnimationsExportingStatic HostingRecord PresentationPresenter ModeDrawing & AnnotationsEditor IntegrationsFAQThemeUse ThemeTheme GalleryWrite a ThemeBuilt-inComponentsLayoutsCustomizeCustomizationsDirectory StructureFontsHighlightersConfigure VueConfigure ViteConfigure UnoCSSConfigure MonacoConfigure KaTeXConfigure MermaidConfigure ParserConfigure ShortcutsVue Global ContextGlobal LayersAddonUse AddonWrite an AddonResourcesShowcasesLearning ResourcesCurated Coversv0.48.0-beta.2Release NotesEnglish简体中文FrançaisEspañolРусскийViệt NamDeutschPortuguês (BR)Ελληνικά日本語GitHubTwitterDiscordEnglish简体中文FrançaisEspañolРусскийViệt NamDeutschPortuguês (BR)Ελληνικά日本語AppearanceGitHubTwitterDiscordMenuReturn to top Sidebar Navigation GuideWhy SlidevGetting StartedInstallationMarkdown SyntaxNavigationAnimationsExportingStatic HostingRecord PresentationPresenter ModeDrawing & AnnotationsEditor IntegrationsFAQThemesUse ThemeTheme GalleryWrite a ThemeAddonsUse AddonWrite an AddonCustomizationsCustomizationsDirectory StructureFontsHighlightersConfigure VueConfigure ViteConfigure UnoCSSConfigure MonacoConfigure KaTeXConfigure MermaidConfigure ParserConfigure ShortcutsVue Global ContextGlobal LayersBuilt-inComponentsLayoutsOn this page Table of Contents for current page Themes Gallery ​Browse awesome themes available for Slidev here.Read more about how to use a theme, or how to write your own and share with the community!Official Themes ​Community Themes ​Here are the curated themes made by the community.More Themes ​Find all the themes available on NPM. Suggest changes to this pagePrevious pageUse ThemeNext pageWrite a ThemeReleased under the MIT License.Copyright © 2020 Anthony Fu.
+
+

@@ -1,0 +1,54 @@
+
+
+
+
+
+Getting Started | Slidev
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Skip to content SlidevSearchKMain NavigationGuideWhy SlidevGetting StartedInstallationMarkdown SyntaxNavigationAnimationsExportingStatic HostingRecord PresentationPresenter ModeDrawing & AnnotationsEditor IntegrationsFAQThemeUse ThemeTheme GalleryWrite a ThemeBuilt-inComponentsLayoutsCustomizeCustomizationsDirectory StructureFontsHighlightersConfigure VueConfigure ViteConfigure UnoCSSConfigure MonacoConfigure KaTeXConfigure MermaidConfigure ParserConfigure ShortcutsVue Global ContextGlobal LayersAddonUse AddonWrite an AddonResourcesShowcasesLearning ResourcesCurated Coversv0.48.0-beta.2Release NotesEnglish简体中文FrançaisEspañolРусскийViệt NamDeutschPortuguês (BR)Ελληνικά日本語GitHubTwitterDiscordEnglish简体中文FrançaisEspañolРусскийViệt NamDeutschPortuguês (BR)Ελληνικά日本語AppearanceGitHubTwitterDiscordMenuReturn to top Sidebar Navigation GuideWhy SlidevGetting StartedInstallationMarkdown SyntaxNavigationAnimationsExportingStatic HostingRecord PresentationPresenter ModeDrawing & AnnotationsEditor IntegrationsFAQThemesUse ThemeTheme GalleryWrite a ThemeAddonsUse AddonWrite an AddonCustomizationsCustomizationsDirectory StructureFontsHighlightersConfigure VueConfigure ViteConfigure UnoCSSConfigure MonacoConfigure KaTeXConfigure MermaidConfigure ParserConfigure ShortcutsVue Global ContextGlobal LayersBuilt-inComponentsLayoutsOn this page Table of Contents for current page Getting Started ​Slidev (slide + dev, /slaɪdɪv/) is a web-based slides maker and presenter. It's designed for developers to focus on writing content in Markdown while also having the power of HTML and Vue components to deliver pixel-perfect layouts and designs with embedded interactive demos in your presentations.It uses a feature-rich markdown file to generate beautiful slides with an instant reloading experience, along with many built-in integrations such as live coding, PDF exporting, presentation recording, and so on. Since it's powered by the web, you can do anything with Slidev - the possibilities are endless.You can learn more about the rationale behind the project in the Why Slidev section.Features ​📝 Markdown-based - use your favorite editors and workflow🧑‍💻 Developer Friendly - built-in syntax highlighting, live coding, etc.🎨 Themable - theme can be shared and used with npm packages🌈 Stylish - on-demand utilities via UnoCSS.🤹 Interactive - embedding Vue components seamlessly🎙 Presenter Mode - use another window, or even your phone to control your slides🎨 Drawing - draw and annotate on your slides🧮 LaTeX - built-in LaTeX math equations support📰 Diagrams - creates diagrams with textual descriptions🌟 Icons - Access to icons from any iconset directly💻 Editors - integrated editor, or extension for VS Code🎥 Recording - built-in recording and camera view📤 Portable - export into PDF, PNGs, or even a hostable SPA⚡️ Fast - instant reloading powered by Vite🛠 Hackable - using Vite plugins, Vue components, or any npm packagesScaffolding Your First Presentation ​Try it Online ​Start Slidev right in your browser: sli.dev/newCreate Locally ​npmyarnpnpmbashnpm init slidev@latestbashyarn create slidevbashpnpm create slidevFollow the prompts and start making your slides now! For more details about the markdown syntax, read through the syntax guide.Command Line Interface ​In a project where Slidev is installed, you can use the slidev binary in your npm scripts.json{
+  "scripts": {
+    "dev": "slidev", // start dev server
+    "build": "slidev build", // build for production SPA
+    "export": "slidev export" // export slides to pdf
+  }
+}Otherwise, you can use it with npxbash$ npx slidevRun slidev --help for more options available.Markdown Syntax ​Slidev reads your slides.md file under your project root and converts them into slides. Whenever you made changes to it, the content of the slides will be updated immediately. For example:md# Slidev
+
+Hello World
+
+---
+
+# Page 2
+
+Directly use code blocks for highlighting
+
+```ts
+console.log('Hello, World!')
+```
+
+---
+
+# Page 3Read more about the Slidev Markdown syntax in the syntax guide.Tech Stack ​Slidev is made possible by combining these tools and technologies.Vite - An extremely fast frontend toolingVue 3 powered Markdown - Focus on the content while having the power of HTML and Vue components whenever neededUnoCSS - On-demand utility-first CSS framework, style your slides at easeShiki, Prism, Monaco Editor - First-class code snippets support with live coding capabilityRecordRTC - Built-in recording and camera viewVueUse family - @vueuse/core, @vueuse/head, @vueuse/motion, etc.Iconify - Iconsets collection.Drauu - Drawing and annotations supportKaTeX - LaTeX math rendering.Mermaid - Textual Diagrams. Suggest changes to this pagePrevious pageWhy SlidevNext pageInstallationReleased under the MIT License.Copyright © 2020 Anthony Fu.
+
+

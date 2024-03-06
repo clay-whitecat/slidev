@@ -1,0 +1,73 @@
+
+
+
+
+
+Fonts | Slidev
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Skip to content SlidevSearchKMain NavigationGuideWhy SlidevGetting StartedInstallationMarkdown SyntaxNavigationAnimationsExportingStatic HostingRecord PresentationPresenter ModeDrawing & AnnotationsEditor IntegrationsFAQThemeUse ThemeTheme GalleryWrite a ThemeBuilt-inComponentsLayoutsCustomizeCustomizationsDirectory StructureFontsHighlightersConfigure VueConfigure ViteConfigure UnoCSSConfigure MonacoConfigure KaTeXConfigure MermaidConfigure ParserConfigure ShortcutsVue Global ContextGlobal LayersAddonUse AddonWrite an AddonResourcesShowcasesLearning ResourcesCurated Coversv0.48.0-beta.2Release NotesEnglish简体中文FrançaisEspañolРусскийViệt NamDeutschPortuguês (BR)Ελληνικά日本語GitHubTwitterDiscordEnglish简体中文FrançaisEspañolРусскийViệt NamDeutschPortuguês (BR)Ελληνικά日本語AppearanceGitHubTwitterDiscordMenuReturn to top Sidebar Navigation GuideWhy SlidevGetting StartedInstallationMarkdown SyntaxNavigationAnimationsExportingStatic HostingRecord PresentationPresenter ModeDrawing & AnnotationsEditor IntegrationsFAQThemesUse ThemeTheme GalleryWrite a ThemeAddonsUse AddonWrite an AddonCustomizationsCustomizationsDirectory StructureFontsHighlightersConfigure VueConfigure ViteConfigure UnoCSSConfigure MonacoConfigure KaTeXConfigure MermaidConfigure ParserConfigure ShortcutsVue Global ContextGlobal LayersBuilt-inComponentsLayoutsOn this page Table of Contents for current page Fonts ​Available since v0.20While you can use HTML and CSS to custom the fonts and style for your slides as you want, Slidev also provides a convenient way to use them effortlessly.In your frontmatter, configure as followingyaml---
+fonts:
+  # basically the text
+  sans: Robot
+  # use with `font-serif` css class from UnoCSS
+  serif: Robot Slab
+  # for code blocks, inline code, etc.
+  mono: Fira Code
+---And that's all.Fonts will be imported automatically from Google Fonts. That means you can use any fonts available on Google Fonts directly.Local Fonts ​By default, Slidev assumes all the fonts specified via fonts configurations come from Google Fonts. If you want to use local fonts, specify the fonts.local to opt-out the auto-importing.yaml---
+fonts:
+  # like font-family in css, you can use `,` to separate multiple fonts for fallback
+  sans: 'Helvetica Neue,Robot'
+  # mark 'Helvetica Neue' as local font
+  local: Helvetica Neue
+---Weights & Italic ​By default, Slidev imports three weights 200,400,600 for each font. You can configure them by:yaml---
+fonts:
+  sans: Robot
+  # default
+  weights: '200,400,600'
+  # import italic fonts, default `false`
+  italic: false
+---This configuration applies to all web fonts. For more fine-grained controls of each font's weights, you will need to manually import them with HTML and CSS.Fallback Fonts ​For most of the scenarios, you only need to specify the "special font" and Slidev will append the fallback fonts for you, for example:yaml---
+fonts:
+  sans: Robot
+  serif: Robot Slab
+  mono: Fira Code
+---will result incss.font-sans {
+  font-family: "Robot",ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+.font-serif {
+  font-family: "Robot Slab",ui-serif,Georgia,Cambria,"Times New Roman",Times,serif;
+}
+.font-mono {
+  font-family: "Fira Code",ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+}If you want to disable the fallback fonts, configure as followingyaml---
+fonts:
+  mono: 'Fira Code, monospace'
+  fallbacks: false
+---Providers ​Options: google | noneDefault: googleCurrently, only Google Fonts is supported, we are planned to add more providers in the future. Specify to none will disable the auto-importing feature entirely and treat all the fonts local.yaml---
+fonts:
+  provider: none
+--- Suggest changes to this pagePrevious pageDirectory StructureNext pageHighlightersReleased under the MIT License.Copyright © 2020 Anthony Fu.
+
+

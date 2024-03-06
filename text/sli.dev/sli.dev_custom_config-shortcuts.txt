@@ -1,0 +1,76 @@
+
+
+
+
+
+Configure Shortcuts | Slidev
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Skip to content SlidevSearchKMain NavigationGuideWhy SlidevGetting StartedInstallationMarkdown SyntaxNavigationAnimationsExportingStatic HostingRecord PresentationPresenter ModeDrawing & AnnotationsEditor IntegrationsFAQThemeUse ThemeTheme GalleryWrite a ThemeBuilt-inComponentsLayoutsCustomizeCustomizationsDirectory StructureFontsHighlightersConfigure VueConfigure ViteConfigure UnoCSSConfigure MonacoConfigure KaTeXConfigure MermaidConfigure ParserConfigure ShortcutsVue Global ContextGlobal LayersAddonUse AddonWrite an AddonResourcesShowcasesLearning ResourcesCurated Coversv0.48.0-beta.2Release NotesEnglish简体中文FrançaisEspañolРусскийViệt NamDeutschPortuguês (BR)Ελληνικά日本語GitHubTwitterDiscordEnglish简体中文FrançaisEspañolРусскийViệt NamDeutschPortuguês (BR)Ελληνικά日本語AppearanceGitHubTwitterDiscordMenuReturn to top Sidebar Navigation GuideWhy SlidevGetting StartedInstallationMarkdown SyntaxNavigationAnimationsExportingStatic HostingRecord PresentationPresenter ModeDrawing & AnnotationsEditor IntegrationsFAQThemesUse ThemeTheme GalleryWrite a ThemeAddonsUse AddonWrite an AddonCustomizationsCustomizationsDirectory StructureFontsHighlightersConfigure VueConfigure ViteConfigure UnoCSSConfigure MonacoConfigure KaTeXConfigure MermaidConfigure ParserConfigure ShortcutsVue Global ContextGlobal LayersBuilt-inComponentsLayoutsOn this page Table of Contents for current page Configure Shortcuts ​Available since v0.20Since v0.35.6 (excluded), you decide which base shortcuts to keep (see ...base, below). Environment: client This setup function will only run on client side. Make sure the browser compatibility when importing packages. Getting started ​Create ./setup/shortcuts.ts with the following content:tsimport type { NavOperations, ShortcutOptions } from '@slidev/types'
+import { defineShortcutsSetup } from '@slidev/types'
+
+export default defineShortcutsSetup((nav: NavOperations, base: ShortcutOptions[]) => {
+  return [
+    ...base, // keep the existing shortcuts
+    {
+      key: 'enter',
+      fn: () => nav.next(),
+      autoRepeat: true,
+    },
+    {
+      key: 'backspace',
+      fn: () => nav.prev(),
+      autoRepeat: true,
+    },
+  ]
+})With the setup, you can provide the custom setting for shortcuts mentioned in Navigation. The above configuration binds next animation or slide to enter and previous animation or slide to backspace.The configuration function receives an object with some navigation methods, and returns an array containing some shortcut configuration. Refer to the type definitions for more details.Advanced key binding ​The key type only allows for strings, but you can still bind multiple keys by using following convention:tsimport type { NavOperations, ShortcutOptions } from '@slidev/types'
+import { defineShortcutsSetup } from '@slidev/types'
+
+export default defineShortcutsSetup((nav: NavOperations, base: ShortcutOptions[]) => {
+  return [
+    ...base,
+    {
+      key: 'ShiftLeft+ArrowRight',
+      fn: () => nav.next(),
+      autoRepeat: true,
+    }
+  ]
+})Advanced navigation features ​The nav navigation operations allows you to access some functionalities than basic next slide or previous slide. See the following for use-cases:tsimport { NavOperations, defineShortcutsSetup } from '@slidev/types'
+
+export default defineShortcutsSetup((nav: NavOperations) => {
+  return [
+    {
+      key: 'e',
+
+      // Set the `e` keyboard shortcut to be used as a bookmark
+      // or quick-access of sorts, to navigate specifically to
+      // slide number 42
+      fn: () => nav.go(42),
+      autoRepeat: true,
+    }
+  ]
+})Refer to useMagicKeys | VueUse for more details about key pressed event. Suggest changes to this pagePrevious pageConfigure ParserNext pageVue Global ContextReleased under the MIT License.Copyright © 2020 Anthony Fu.
+
+

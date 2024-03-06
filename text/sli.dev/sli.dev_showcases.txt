@@ -1,0 +1,33 @@
+
+
+
+
+
+Showcases | Slidev
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Skip to content SlidevSearchKMain NavigationGuideWhy SlidevGetting StartedInstallationMarkdown SyntaxNavigationAnimationsExportingStatic HostingRecord PresentationPresenter ModeDrawing & AnnotationsEditor IntegrationsFAQThemeUse ThemeTheme GalleryWrite a ThemeBuilt-inComponentsLayoutsCustomizeCustomizationsDirectory StructureFontsHighlightersConfigure VueConfigure ViteConfigure UnoCSSConfigure MonacoConfigure KaTeXConfigure MermaidConfigure ParserConfigure ShortcutsVue Global ContextGlobal LayersAddonUse AddonWrite an AddonResourcesShowcasesLearning ResourcesCurated Coversv0.48.0-beta.2Release NotesEnglish简体中文FrançaisEspañolРусскийViệt NamDeutschPortuguês (BR)Ελληνικά日本語GitHubTwitterDiscordEnglish简体中文FrançaisEspañolРусскийViệt NamDeutschPortuguês (BR)Ελληνικά日本語AppearanceGitHubTwitterDiscordReturn to topOn this page Table of Contents for current page Showcases ​Talks / Presentations using Slidev.Composable VueVueDay 2021Anthony FuDeveloper SeonglaeSeonglandSeonglae ChoVue 3 > Vue 2 + 1Enter.js Vue DayThorsten LünborgSimply Publish Your Package to npmWeekly sharingLucky Dewa SatriaCreate Icon Package With Vue and RollupWeekly SharingLucky Dewa SatriaBeAPTPresentation of my college final projectDaniel Sousa @TutoDSPrisma as my ORM for PostgreSQLLyonJS MeetupCedric NicolosoIntroduction to SVGThoughtworks Internal Lunch & LearnEstee TeyGit's Most WantedInternal Tech TalkAlexander EbleOpenFunction 202OpenFunction Tutorial SharingHaili ZhangIs it Okay to Pursue Functional Programming on Frontend?2022 JSConf KoreaMinsu Kim , Changhui LeeBlazing slidev ppt template with naive-uipersonal sharinggodkunBuilding a Polite Popup with Nuxt 3Vue.js Nation 2023Michael HoffmannDev Environment as CodeInternal Tech TalkAlexander EbleExploring Social EngineeringPresentation on Social Engineering in Computers in Society classzyf722Yours?Submit your talk/presentation to be list here! Suggest changes to this pageNext pageWhy SlidevReleased under the MIT License.Copyright © 2020 Anthony Fu.
+
+

@@ -1,0 +1,48 @@
+
+
+
+
+
+Highlighters | Slidev
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Skip to content SlidevSearchKMain NavigationGuideWhy SlidevGetting StartedInstallationMarkdown SyntaxNavigationAnimationsExportingStatic HostingRecord PresentationPresenter ModeDrawing & AnnotationsEditor IntegrationsFAQThemeUse ThemeTheme GalleryWrite a ThemeBuilt-inComponentsLayoutsCustomizeCustomizationsDirectory StructureFontsHighlightersConfigure VueConfigure ViteConfigure UnoCSSConfigure MonacoConfigure KaTeXConfigure MermaidConfigure ParserConfigure ShortcutsVue Global ContextGlobal LayersAddonUse AddonWrite an AddonResourcesShowcasesLearning ResourcesCurated Coversv0.48.0-beta.2Release NotesEnglish简体中文FrançaisEspañolРусскийViệt NamDeutschPortuguês (BR)Ελληνικά日本語GitHubTwitterDiscordEnglish简体中文FrançaisEspañolРусскийViệt NamDeutschPortuguês (BR)Ελληνικά日本語AppearanceGitHubTwitterDiscordMenuReturn to top Sidebar Navigation GuideWhy SlidevGetting StartedInstallationMarkdown SyntaxNavigationAnimationsExportingStatic HostingRecord PresentationPresenter ModeDrawing & AnnotationsEditor IntegrationsFAQThemesUse ThemeTheme GalleryWrite a ThemeAddonsUse AddonWrite an AddonCustomizationsCustomizationsDirectory StructureFontsHighlightersConfigure VueConfigure ViteConfigure UnoCSSConfigure MonacoConfigure KaTeXConfigure MermaidConfigure ParserConfigure ShortcutsVue Global ContextGlobal LayersBuilt-inComponentsLayoutsOn this page Table of Contents for current page Highlighters ​Slidev comes with two syntax highlighters for you to choose from:PrismShikiPrism is one of the most popular syntax highlighters. The highlighting is done by adding token classes to the code and it's colored using CSS. You can browse through their official themes, or create/customize one yourself very easily using prism-theme-vars.Shiki is a TextMate grammar-powered syntax highlighter. It generates colored tokens, so there is no additional CSS needed. Since it has great grammar support, the generated colors are very accurate, just like what you will see in VS Code. Shiki also comes with a bunch of built-in themes. In Slidev, we also provided the TwoSlash support is also built-in.Slidev themes usually support both Prism and Shiki, but depending on the theme you are using, it might only support one of them.When you have the choice, the tradeoff is basically:Prism for easier customizationShiki for accurate highlightingSlidev uses Shiki by default since v0.47. You can switch to it by adding the following to your slides.md:yaml---
+highlighter: Prism
+---Configure Shiki ​ Environment: node This setup function will only run on Node.js environment, you can have access to Node's API. Create ./setup/shiki.ts file with the following contentts/* ./setup/shiki.ts */
+import { defineShikiSetup } from '@slidev/types'
+
+export default defineShikiSetup(() => {
+  return {
+    themes: {
+      dark: 'min-dark',
+      light: 'min-light',
+    },
+    transformers: [
+      // ...
+    ]
+  }
+})Refer to Shiki's docs for available theme names.Configure Prism ​To configure your Prism, you can just import the theme CSS or use prism-theme-vars to configure themes for both light and dark mode. Refer to its docs for more details. Suggest changes to this pagePrevious pageFontsNext pageConfigure VueReleased under the MIT License.Copyright © 2020 Anthony Fu.
+
+

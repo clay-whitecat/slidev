@@ -1,0 +1,65 @@
+
+
+
+
+
+Components | Slidev
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Skip to content SlidevSearchKMain NavigationGuideWhy SlidevGetting StartedInstallationMarkdown SyntaxNavigationAnimationsExportingStatic HostingRecord PresentationPresenter ModeDrawing & AnnotationsEditor IntegrationsFAQThemeUse ThemeTheme GalleryWrite a ThemeBuilt-inComponentsLayoutsCustomizeCustomizationsDirectory StructureFontsHighlightersConfigure VueConfigure ViteConfigure UnoCSSConfigure MonacoConfigure KaTeXConfigure MermaidConfigure ParserConfigure ShortcutsVue Global ContextGlobal LayersAddonUse AddonWrite an AddonResourcesShowcasesLearning ResourcesCurated Coversv0.48.0-beta.2Release NotesEnglish简体中文FrançaisEspañolРусскийViệt NamDeutschPortuguês (BR)Ελληνικά日本語GitHubTwitterDiscordEnglish简体中文FrançaisEspañolРусскийViệt NamDeutschPortuguês (BR)Ελληνικά日本語AppearanceGitHubTwitterDiscordMenuReturn to top Sidebar Navigation GuideWhy SlidevGetting StartedInstallationMarkdown SyntaxNavigationAnimationsExportingStatic HostingRecord PresentationPresenter ModeDrawing & AnnotationsEditor IntegrationsFAQThemesUse ThemeTheme GalleryWrite a ThemeAddonsUse AddonWrite an AddonCustomizationsCustomizationsDirectory StructureFontsHighlightersConfigure VueConfigure ViteConfigure UnoCSSConfigure MonacoConfigure KaTeXConfigure MermaidConfigure ParserConfigure ShortcutsVue Global ContextGlobal LayersBuilt-inComponentsLayoutsOn this page Table of Contents for current page Components ​Built-in Components ​Arrow ​Draw an arrow.Usage ​md<Arrow x1="10" y1="20" x2="100" y2="200" />Or:md<Arrow v-bind="{ x1:10, y1:10, x2:200, y2:200 }" />Parameters:x1 (string | number, required): start point x positiony1 (string | number, required): start point y positionx2 (string | number, required): end point x positiony2 (string | number, required): end point x positionwidth (string | number, default: 2): line widthcolor (string, default: 'currentColor'): line colorAutoFitText ​ExperimentalBox inside which the font size will automatically adapt to fit the content. Similar to PowerPoint or Keynote TextBox.Usage ​md<AutoFitText :max="200" :min="100" modelValue="Some text"/>Parameters:max (string | number, default 100): Maximum font sizemin (string | number, default 30): Minimum font sizemodelValue (string, default ''): text contentLightOrDark ​Use it to display one thing or another depending on the active light or dark theme.Usage ​Use it with the two named Slots #dark and #light:md<LightOrDark>
+  <template #dark>Dark mode is on</template>
+  <template #light>Light mode is on</template>
+</LightOrDark>Provided props on LightOrDark component will be available using scoped slot props:md<LightOrDark width="100" alt="some image">
+  <template #dark="props">
+    <img src="/dark.png" v-bind="props"/>
+  </template>
+  <template #light="props">
+    <img src="/light.png" v-bind="props"/>
+  </template>
+</LightOrDark>You can provide markdown in the slots, but you will need to surround the content with blank lines:md<LightOrDark>
+  <template #dark>
+
+![dark](/dark.png)
+
+  </template>
+  <template #light>
+
+![light](/light.png)
+
+  </template>
+</LightOrDark>Link ​Insert a link you can use to navigate to a given slide.Usage ​md<Link to="42">Go to slide 42</Link>
+<Link to="42" title="Go to slide 42"/>
+<Link to="solutions" title="Go to solutions"/>Parameters:to (string | number): The path of the slide to navigate to (slides starts from 1)title (string): The title to displayOne can use a string as to, provided the corresponding route exists, e.g.md---
+routeAlias: solutions
+---
+# Now some solutions!RenderWhen ​Render slot only when the context match (for example when we are in presenter view).Usage ​md<RenderWhen context="presenter">This will only be rendered in presenter view.</RenderWhen>Context type: 'main' | 'slide' | 'overview' | 'presenter' | 'previewNext'Parameters:context (Context | Context[]): context or array of contexts you want the slot to be renderedSlideCurrentNo ​Current slide number.Usage ​md<SlideCurrentNo />SlidesTotal ​Total number of slides.Usage ​md<SlidesTotal />Titles ​Insert the main title from a slide parsed as HTML.Titles and title levels get automatically retrieved from the first title element of each slides.You can override this automatic behaviour for a slide by using the front matter syntax:yml---
+title: Amazing slide title
+level: 2
+---Usage ​The <Titles> component is a virtual component you can import with:jsimport Titles from '/@slidev/titles.md'Then you can use it with:md<Titles no="42" />Parameters:no (string | number): The number of the slide to display the title from (slides starts from 1)Toc ​Insert a Table Of Content.If you want a slide to not appear in the <Toc> component, you can use in the front matter block of the slide:yml---
+hideInToc: true
+---Titles are displayed using the <Titles> componentUsage ​md<Toc />Parameters:columns (string | number, default: 1): The number of columns of the displaylistClass (string | string[], default: ''): Classes to apply to the table of contents listmaxDepth (string | number, default: Infinity): The maximum depth level of title to displayminDepth (string | number, default: 1): The minimum depth level of title to displaymode ('all' | 'onlyCurrentTree'| 'onlySiblings', default: 'all'): 'all': Display all items'onlyCurrentTree': Display only items that are in current tree (active item, parents and children of active item)'onlySiblings': Display only items that are in current tree and their direct siblingsTransform ​Apply scaling or transforming to elements.Usage ​md<Transform :scale="0.5">
+  <YourElements />
+</Transform>Parameters:scale (number | string, default 1): transform scale valueorigin (string, default 'top left'): transform origin valueTweet ​Embed a tweet.Usage ​md<Tweet id="20" />Parameters:id (number | string, required): id of the tweetscale (number | string, default 1): transform scale valueconversation (string, default 'none'): tweet embed parametercards ('hidden' | 'visible', default 'visible'): tweet embed parameterVAfter, VClick and VClicks ​See https://sli.dev/guide/animations.htmlYoutube ​Embed a youtube video.Usage ​md<Youtube id="luoMHjh-XcQ" />Parameters:id (string, required): id of the youtube videowidth (number): width of the videoheight (number): height of the videoYou can also make the video start at specific time if you add ?start=1234 to the id value (where 1234 are seconds),Custom Components ​Create a directory components/ under your project root, and simply put your custom Vue components under it, then you can use it with the same name in your markdown file!Read more in the Customization section.Theme-provided Components ​Themes can provide components as well. Please read their documentations for what they have provided.Check more in the directory structure section. Suggest changes to this pagePrevious pageGlobal LayersNext pageLayoutsReleased under the MIT License.Copyright © 2020 Anthony Fu.
+
+

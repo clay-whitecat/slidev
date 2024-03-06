@@ -1,0 +1,179 @@
+
+
+
+  
+
+
+
+PyDriller documentation! — PyDriller 1.0 documentation
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ PyDriller
+          
+
+          
+          
+
+                1.3
+              
+
+
+
+
+
+
+
+
+
+
+Overview / Install
+Getting Started
+Configuration
+Commit Object
+Modifications
+Git Repository
+API Reference
+
+
+
+
+
+
+
+PyDriller
+
+
+
+
+
+Docs »
+PyDriller documentation!
+
+ Edit on GitHub
+
+
+
+
+
+
+
+PyDriller documentation!¶
+
+
+Overview / Install
+Requirements
+Installing PyDriller
+Source Code
+How to cite PyDriller
+
+
+Getting Started
+Configuration
+Selecting the Commit Range
+Filtering commits
+
+
+Commit Object
+Modifications
+Git Repository
+API Reference
+GitRepository
+RepositoryMining
+Commit
+Developer
+
+
+
+
+
+
+Indices and tables¶
+
+Index
+Module Index
+Search Page
+
+
+
+
+
+
+Next 
+
+
+
+
+        © Copyright 2018, Davide Spadini
+      
+        
+          Revision 805f327c.
+        
+
+
+  Built with Sphinx using a theme provided by Read the Docs. 
+
+
+
+
+
+
+
+
+ Read the Docs
+      v: 1.3
+      
+
+
+
+Versions
+latest
+1.3
+1.2
+1.1
+1.0
+
+
+Downloads
+
+
+On Read the Docs
+
+Project Home
+
+
+Builds
+
+
+
+      Free document hosting provided by Read the Docs.
+
+    
+
+
+
+
+
+
+
+
+
+

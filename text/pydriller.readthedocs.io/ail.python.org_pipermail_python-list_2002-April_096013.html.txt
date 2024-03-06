@@ -1,0 +1,9 @@
+
+
+404 Not Found
+
+Not Found
+The requested URL /pipermail/python-list/2002-April/096013.html was not found on this server.
+
+Apache/2.4.39 (Ubuntu) Server at mail.python.org Port 443
+
